@@ -10,3 +10,12 @@
     height: 100%;
     width: var(--default-layout-width, 1150px);
 }
+
+.logo {
+}
+
+.logoImage {
+    width: 118px;
+    aspect-ratio: auto 118 / 34;
+    height: 34px;
+}
