@@ -33,7 +33,6 @@ function Header() {
 
                     {/* loading */}
                     <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
-
                     <button className={cx('searchBtn')}>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </button>
