@@ -1,5 +1,8 @@
 import classNames from 'classnames/bind';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Header.module.scss';
+import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -22,14 +25,21 @@ function Header() {
                 </div>
 
                 <form className={cx('search')}>
-                    <input placeholder="search" />
+                    <input placeholder="Search" />
 
-                    <button className={cx('clear')}>{/* clear */}</button>
+                    <button className={cx('clear')}>
+                        <FontAwesomeIcon icon={faCircleXmark} />
+                    </button>
 
                     {/* loading */}
+                    <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
 
-                    <button className={cx('searchBtn')}></button>
+                    <button className={cx('searchBtn')}>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </button>
                 </form>
+
+                <div className={cx('actions')}></div>
             </div>
         </header>
     );
