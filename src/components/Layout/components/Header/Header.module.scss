@@ -1,3 +1,8 @@
+.search,
+.searchResult {
+    width: 361px;
+}
+
 .wrapper {
     width: 100%;
     height: var(--default-layout-header-height, 60px);
@@ -12,9 +17,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.logo {
 }
 
 .logoImage {
@@ -35,7 +37,6 @@
     overflow: hidden;
     z-index: 1;
     margin: 0px;
-    width: 516px;
     height: 46px;
     border: 1px solid transparent;
 
@@ -69,6 +70,16 @@
     }
 }
 
+.searchResult {
+}
+
+.searchTitle {
+    color: rgba(22, 24, 35, 0.2);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 5px 12px;
+}
+
 .clear,
 .loading {
     position: absolute;
@@ -88,4 +99,8 @@
         background-color: rgba(22, 24, 35, 0.03);
         color: rgba(22, 24, 35, 1);
     }
+}
+
+.actions {
+    display: flex;
 }

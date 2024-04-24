@@ -6,4 +6,6 @@
  - normalize.css: reset css
  - Default CSS: font-family, font-size, line-height
  - Cài react-router-dom
+ - Cài tippy cho reactjs: tạo các tooltip tùy chỉnh vào trang web
+ (tooltip là thành phần giao diện, thường được hiển thị bổ sung khi người dùng click, hoặc hover vào một phần tử)
  -->

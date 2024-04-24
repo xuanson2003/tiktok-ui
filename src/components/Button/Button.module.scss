@@ -1,0 +1,85 @@
+.wrapper {
+    border-radius: 4px;
+    min-height: 36px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 6px 8px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 21px;
+    margin-left: 16px;
+    min-width: 100px;
+    background-color: var(--white);
+    border: 1px solid transparent;
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+// Button types
+.rounded {
+    border-radius: 999px;
+    border-color: rgba(22, 24, 35, 0.12);
+    color: rgba(22, 24, 35, 0.75);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.primary {
+    color: var(--white);
+    background-color: rgb(254, 44, 85);
+    border-color: rgb(254, 44, 85);
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+    }
+}
+
+.outline {
+    appearance: none;
+    min-width: 96px;
+    background-clip: padding-box;
+    color: rgba(254, 44, 85, 1);
+    border-color: rgba(254, 44, 85, 1);
+
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.08);
+    }
+}
+
+.text {
+    border-color: rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    background-color: var(--white);
+    font-weight: 600;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+// Button sizes
+.small {
+    min-height: 28px;
+    min-width: 88px;
+    padding: 3px 8px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 13px 16px;
+}
