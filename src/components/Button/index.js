@@ -43,6 +43,8 @@ function Button({
         Comp = 'a';
     }
 
+    console.log(children + ' ' + to);
+
     const classes = cx('wrapper', {
         [className]: className,
         primary,

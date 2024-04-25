@@ -53,7 +53,7 @@ const MENU_ITEM = [
 ];
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([1]);
+    const [searchResult, setSearchResult] = useState([]);
 
     // Handle
     const handleMenuChange = (menuItem) => {
@@ -77,7 +77,7 @@ function Header() {
 
                 <Tippy
                     interactive
-                    visible={searchResult.length > 0}
+                    // visible={searchResult.length > 0}
                     render={(attrs) => (
                         <div className={cx('searchResult')} tabIndex="-1" {...attrs}>
                             <PopperWrapper>

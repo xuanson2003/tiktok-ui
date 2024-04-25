@@ -16,6 +16,7 @@
     min-width: 100px;
     background-color: var(--white);
     border: 1px solid transparent;
+    color: rgba(22, 24, 35, 0.75);
 
     &.disabled {
         pointer-events: none;
@@ -38,7 +39,6 @@
 .rounded {
     border-radius: 999px;
     border-color: rgba(22, 24, 35, 0.12);
-    color: rgba(22, 24, 35, 0.75);
 
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
