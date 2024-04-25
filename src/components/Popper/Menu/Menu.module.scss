@@ -1,0 +1,21 @@
+// Menu wrapper
+.menuList {
+    width: 223px;
+
+    .menuItem {
+        justify-content: flex-start;
+        padding: 10px 8px 10px 16px;
+        margin-left: 0;
+        width: 100%;
+        border-radius: 0;
+        font-weight: 500;
+
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.03);
+        }
+    }
+}
+
+.menuPopper {
+    padding-bottom: 8px;
+}

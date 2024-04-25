@@ -2,18 +2,43 @@ import { useState } from 'react';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faPlus, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCircleQuestion,
+    faCircleXmark,
+    faEarthAmericas,
+    faEllipsisVertical,
+    faKeyboard,
+    faPlus,
+    faSpinner,
+} from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
+import Menu from '~/components/Popper/Menu';
 
 const cx = classNames.bind(styles);
 
+const MENU_ITEM = [
+    {
+        icon: <FontAwesomeIcon icon={faEarthAmericas} />,
+        title: 'English',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        title: 'Feedback and help',
+        to: '/feedback',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faKeyboard} />,
+        title: 'Keyboard shortcuts',
+    },
+];
+
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
+    const [searchResult, setSearchResult] = useState([1]);
 
     return (
         <header className={cx('wrapper')}>
@@ -57,12 +82,17 @@ function Header() {
                 </Tippy>
 
                 <div className={cx('actions')}>
-                    <Button rounded rightIcon={<FontAwesomeIcon icon={faPlus} />}>
+                    <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                         Tải lên
                     </Button>
                     <Button primary className={cx('customBtn')}>
-                        Log in
+                        Đăng nhập
                     </Button>
+                    <Menu items={MENU_ITEM}>
+                        <button className={cx('moreBtn')}>
+                            <FontAwesomeIcon icon={faEllipsisVertical} />
+                        </button>
+                    </Menu>
                 </div>
             </div>
         </header>
