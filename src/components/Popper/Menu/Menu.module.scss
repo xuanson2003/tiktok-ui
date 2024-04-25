@@ -2,6 +2,7 @@
 .menuList {
     width: 223px;
 
+    // Menu item
     .menuItem {
         justify-content: flex-start;
         padding: 10px 8px 10px 16px;
@@ -18,4 +19,23 @@
 
 .menuPopper {
     padding-bottom: 8px;
+}
+
+// Header
+.header {
+    position: relative;
+    height: 50px;
+    margin-top: -8px;
+}
+.backBtn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.headerTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

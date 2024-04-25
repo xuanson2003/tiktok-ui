@@ -25,6 +25,21 @@ const MENU_ITEM = [
     {
         icon: <FontAwesomeIcon icon={faEarthAmericas} />,
         title: 'English',
+        children: {
+            title: 'Languages',
+            data: [
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -39,6 +54,15 @@ const MENU_ITEM = [
 
 function Header() {
     const [searchResult, setSearchResult] = useState([1]);
+
+    // Handle
+    const handleMenuChange = (menuItem) => {
+        switch (menuItem.type) {
+            case 'language':
+                break;
+            default:
+        }
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -88,7 +112,7 @@ function Header() {
                     <Button primary className={cx('customBtn')}>
                         Đăng nhập
                     </Button>
-                    <Menu items={MENU_ITEM}>
+                    <Menu items={MENU_ITEM} onChange={handleMenuChange}>
                         <button className={cx('moreBtn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
