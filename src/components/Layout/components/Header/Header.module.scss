@@ -71,9 +71,6 @@
     }
 }
 
-.searchResult {
-}
-
 .searchTitle {
     color: rgba(22, 24, 35, 0.2);
     font-size: 1.4rem;
@@ -104,6 +101,7 @@
 
 .actions {
     display: flex;
+    align-items: center;
 }
 
 .moreBtn {
@@ -111,5 +109,26 @@
     margin-left: 20px;
     padding: 4px 8px;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.actionUpload {
+    margin-right: 24px;
+}
+
+.actionBtn {
+    background-color: transparent;
+    font-size: 2.4rem;
+    color: #161823;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+.userAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 16px;
+    object-fit: cover;
     cursor: pointer;
 }

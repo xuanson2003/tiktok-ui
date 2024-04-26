@@ -1,10 +1,10 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
     --primary: #fe2c55;
     --black: #000;
-    --text-color: #333;
+    --text-color: #161823;
     --white: #fff;
 
     // Default layout
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-style: normal;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -41,4 +41,32 @@ input,
 
 a[href] {
     text-decoration: none;
+}
+
+// Custom tippy tooltip
+
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: var(--white);
+
+        .tippy-content {
+            padding: 8px;
+        }
+        .tippy-arrow {
+            color: rgba(84, 84, 84, 0.92);
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+        .tippy-arrow:before {
+            top: -8px;
+        }
+    }
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        top: -8px;
+    }
 }
