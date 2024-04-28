@@ -1,6 +1,6 @@
-const UploadIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const UploadIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-qeydvm-StyledPlusIcon e18d3d945"
+        className="css-qeydvm-StyledPlusIcon e18d3d945"
         width={width}
         data-e2e=""
         height={height}
@@ -16,9 +16,9 @@ const UploadIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const MessageIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const MessageIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-y48l9g-StyledIcon e1nx07zo1"
+        className="css-y48l9g-StyledIcon e1nx07zo1"
         width={width}
         data-e2e=""
         height={height}
@@ -34,9 +34,9 @@ const MessageIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const MailboxIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const MailboxIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-1g0p6jv-StyledInboxIcon e18kkhh41"
+        className="css-1g0p6jv-StyledInboxIcon e18kkhh41"
         width="32"
         data-e2e=""
         height="32"
@@ -52,9 +52,9 @@ const MailboxIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const UserIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const UserIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-g0144v"
+        className="css-g0144v"
         width={width}
         data-e2e=""
         height={height}
@@ -70,9 +70,9 @@ const UserIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const LikeIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const LikeIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-g0144v"
+        className="css-g0144v"
         width={width}
         data-e2e=""
         height={height}
@@ -88,9 +88,9 @@ const LikeIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const CoinIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const CoinIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-g0144v"
+        className="css-g0144v"
         width={width}
         data-e2e=""
         height={height}
@@ -111,9 +111,9 @@ const CoinIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const SettingIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const SettingIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-g0144v"
+        className="css-g0144v"
         width={width}
         data-e2e=""
         height={height}
@@ -129,9 +129,9 @@ const SettingIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const LanguageIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const LanguageIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-g0144v"
+        className="css-g0144v"
         width={width}
         data-e2e=""
         height={height}
@@ -147,9 +147,9 @@ const LanguageIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const QuestionIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const QuestionIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-g0144v"
+        className="css-g0144v"
         width={width}
         data-e2e=""
         height={height}
@@ -165,9 +165,9 @@ const QuestionIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const KeyBoardIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const KeyBoardIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-g0144v"
+        className="css-g0144v"
         width={width}
         data-e2e=""
         height={height}
@@ -183,9 +183,9 @@ const KeyBoardIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     </svg>
 );
 
-const LogoutIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
+const LogoutIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-g0144v"
+        className="css-g0144v"
         width={width}
         data-e2e=""
         height={height}
