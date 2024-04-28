@@ -16,7 +16,8 @@
     min-width: 100px;
     background-color: var(--white);
     border: 1px solid transparent;
-    color: rgba(22, 24, 35, 0.75);
+    color: var(--text-color);
+    font-family: 'IBM Plex Sans', TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
 
     &.disabled {
         pointer-events: none;
@@ -32,7 +33,9 @@
 .icon {
     display: inline-block;
     min-width: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 // Button types
@@ -47,11 +50,11 @@
 
 .primary {
     color: var(--white);
-    background-color: rgb(254, 44, 85);
-    border-color: rgb(254, 44, 85);
+    background-color: var(--primary);
+    border-color: var(--primary);
 
     &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), var(--primary);
     }
 }
 

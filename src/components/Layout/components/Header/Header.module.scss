@@ -95,7 +95,7 @@
 
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
-        color: rgba(22, 24, 35, 1);
+        color: vả(--text-color);
     }
 }
 
@@ -120,8 +120,11 @@
     background-color: transparent;
     font-size: 2.4rem;
     color: #161823;
-    padding: 0 12px;
+    padding: 0 8px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .userAvatar {
