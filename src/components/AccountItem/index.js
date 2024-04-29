@@ -1,3 +1,4 @@
+import { Link, Route } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './AccountItem.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,18 +7,18 @@ import Image from '../Image';
 
 const cx = classNames.bind(styles);
 
-function AccountItem() {
+function AccountItem({ data }) {
     return (
-        <div className={cx('wrapper')}>
-            <Image className={cx('avatar')} src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="" />
+        <Link to={`/@${data.nickname}`} className={cx('wrapper')}>
+            <Image className={cx('avatar')} src={data.avatar} alt={data.full_name} />
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
-                    Đỗ Xuân Sơn
-                    <FontAwesomeIcon className={cx('check')} icon={faCircleCheck} />
+                    {data.full_name}
+                    {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCircleCheck} />}
                 </h4>
-                <span className={cx('userName')}>doxuanson</span>
+                <span className={cx('userName')}>{data.nickname}</span>
             </div>
-        </div>
+        </Link>
     );
 }
 

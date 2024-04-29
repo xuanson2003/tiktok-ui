@@ -221,7 +221,7 @@ const LogoutIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
 
 const MoonIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
-        class="css-g0144v"
+        className="css-g0144v"
         width={width}
         data-e2e=""
         height={height}
