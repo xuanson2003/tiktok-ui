@@ -16,6 +16,23 @@ const UploadIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     </svg>
 );
 
+const SearchIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
+    <svg
+        width={width}
+        data-e2e=""
+        height={height}
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M22 10C15.3726 10 10 15.3726 10 22C10 28.6274 15.3726 34 22 34C28.6274 34 34 28.6274 34 22C34 15.3726 28.6274 10 22 10ZM6 22C6 13.1634 13.1634 6 22 6C30.8366 6 38 13.1634 38 22C38 25.6974 36.7458 29.1019 34.6397 31.8113L43.3809 40.5565C43.7712 40.947 43.7712 41.5801 43.3807 41.9705L41.9665 43.3847C41.5759 43.7753 40.9426 43.7752 40.5521 43.3846L31.8113 34.6397C29.1019 36.7458 25.6974 38 22 38C13.1634 38 6 30.8366 6 22Z"
+        ></path>
+    </svg>
+);
+
 const MessageIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     <svg
         className="css-y48l9g-StyledIcon e1nx07zo1"
@@ -103,6 +120,7 @@ const CoinIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
             clipRule="evenodd"
             d="M10.0002 2.49992C5.85803 2.49992 2.50016 5.85778 2.50016 9.99992C2.50016 14.1421 5.85803 17.4999 10.0002 17.4999C14.1423 17.4999 17.5002 14.1421 17.5002 9.99992C17.5002 5.85778 14.1423 2.49992 10.0002 2.49992ZM0.833496 9.99992C0.833496 4.93731 4.93755 0.833252 10.0002 0.833252C15.0628 0.833252 19.1668 4.93731 19.1668 9.99992C19.1668 15.0625 15.0628 19.1666 10.0002 19.1666C4.93755 19.1666 0.833496 15.0625 0.833496 9.99992Z"
         ></path>
+
         <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -201,8 +219,27 @@ const LogoutIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
     </svg>
 );
 
+const MoonIcon = ({ width = '3.2rem', height = '3.2rem', classNameName }) => (
+    <svg
+        class="css-g0144v"
+        width={width}
+        data-e2e=""
+        height={height}
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M20.3019 6.38068C21.723 6.08373 22.9615 7.16986 23.009 8.50693C23.2751 16.0034 29.4377 22 37 22C37.8141 22 38.6105 21.9307 39.3839 21.7982C40.7019 21.5723 42 22.5655 42 24C42 33.9411 33.9411 42 24 42C14.0589 42 6 33.9411 6 24C6 15.3248 12.1351 8.0871 20.3019 6.38068ZM19.2223 10.8358C13.8426 12.7885 10 17.9473 10 24C10 31.732 16.268 38 24 38C31.06 38 36.8994 32.7742 37.8611 25.9797C37.5756 25.9932 37.2886 26 37 26C28.0237 26 20.5827 19.4301 19.2223 10.8358Z"
+        ></path>
+    </svg>
+);
+
 export {
     UploadIcon,
+    SearchIcon,
     MessageIcon,
     MailboxIcon,
     UserIcon,
@@ -213,4 +250,5 @@ export {
     QuestionIcon,
     KeyBoardIcon,
     LogoutIcon,
+    MoonIcon,
 };

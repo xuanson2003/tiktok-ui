@@ -18,11 +18,15 @@
     border: 1px solid transparent;
     color: var(--text-color);
     font-family: 'IBM Plex Sans', TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    text-align: left;
 
     &.disabled {
         pointer-events: none;
         opacity: 0.6;
     }
+}
+.title {
+    flex: 1;
 }
 
 .icon + .title,

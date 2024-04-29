@@ -1,22 +1,14 @@
-import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faCircleXmark,
-    faEllipsisVertical,
-    faPlus,
-    faSpinner,
-    faMagnifyingGlass,
-} from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
-import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 
 import Button from '~/components/Button';
+import Image from '~/components/Image';
 import styles from './Header.module.scss';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import Search from '~/components/Layout/Search';
 import {
     CoinIcon,
     KeyBoardIcon,
@@ -24,18 +16,19 @@ import {
     LogoutIcon,
     MailboxIcon,
     MessageIcon,
+    MoonIcon,
     QuestionIcon,
     SettingIcon,
     UploadIcon,
     UserIcon,
 } from '~/components/Icons';
-import Image from '~/components/Image';
+import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
 const MENU_ITEM = [
     {
-        icon: <LanguageIcon width="2rem" height="2rem" />,
+        leftIcon: <LanguageIcon width="2rem" height="2rem" />,
         title: 'English',
         children: {
             title: 'Languages',
@@ -54,18 +47,27 @@ const MENU_ITEM = [
         },
     },
     {
-        icon: <QuestionIcon width="2rem" height="2rem" />,
+        leftIcon: <QuestionIcon width="2rem" height="2rem" />,
         title: 'Feedback and help',
         to: '/feedback',
     },
     {
-        icon: <KeyBoardIcon width="2rem" height="2rem" />,
+        leftIcon: <KeyBoardIcon width="2rem" height="2rem" />,
         title: 'Keyboard shortcuts',
+    },
+    {
+        leftIcon: <MoonIcon width="2rem" height="2rem" />,
+        title: 'Dark mode',
+        rightIcon: (
+            <label className={cx('switch')}>
+                <input type="checkbox" />
+                <span className={cx('slider')}></span>
+            </label>
+        ),
     },
 ];
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
     const currentUser = true;
 
     // Handle
@@ -79,23 +81,23 @@ function Header() {
 
     const userMenu = [
         {
-            icon: <UserIcon width="2rem" height="2rem" />,
+            leftIcon: <UserIcon width="2rem" height="2rem" />,
             title: 'Xem trang cá nhân',
             to: '/@Son',
         },
         {
-            icon: <CoinIcon width="2rem" height="2rem" />,
+            leftIcon: <CoinIcon width="2rem" height="2rem" />,
             title: 'Get coins',
             to: '/coins',
         },
         {
-            icon: <SettingIcon width="2rem" height="2rem" />,
+            leftIcon: <SettingIcon width="2rem" height="2rem" />,
             title: 'Settings',
             to: '/Settings',
         },
         ...MENU_ITEM,
         {
-            icon: <LogoutIcon width="2rem" height="2rem" />,
+            leftIcon: <LogoutIcon width="2rem" height="2rem" />,
             title: 'Log out',
             to: '/logout',
             separate: 'true',
@@ -106,42 +108,11 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img
-                        alt="File:TikTok logo.svg"
-                        src="//upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/500px-TikTok_logo.svg.png?20200415104610"
-                        className={cx('logoImage')}
-                    />
+                    <img alt="File:TikTok logo.svg" src={images.LogoDark} className={cx('logoImage')} />
                 </div>
 
-                <HeadlessTippy
-                    interactive
-                    // visible={searchResult.length > 0}
-                    render={(attrs) => (
-                        <div className={cx('searchResult')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
-                                <h3 className={cx('searchTitle')}>Accounts</h3>
-                                <AccountItem />
-                                <AccountItem />
-                                <AccountItem />
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input placeholder="Search" />
-
-                        <button className={cx('clear')}>
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
-
-                        {/* loading */}
-                        <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
-
-                        <button className={cx('searchBtn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </button>
-                    </div>
-                </HeadlessTippy>
+                {/* Search */}
+                <Search />
 
                 <div className={cx('actions')}>
                     {currentUser ? (
@@ -167,7 +138,7 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                            <Button text leftIcon={<UploadIcon width="2rem" height="2rem" />}>
                                 Upload
                             </Button>
                             <Button primary className={cx('customBtn')}>
