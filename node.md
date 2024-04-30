@@ -9,3 +9,8 @@
  - Cài tippy cho reactjs: tạo các tooltip tùy chỉnh vào trang web
  (tooltip là thành phần giao diện, thường được hiển thị bổ sung khi người dùng click, hoặc hover vào một phần tử)
  -->
+
+<!-- Kỹ thuật -->
+<!--
+    - debouncing: là kỹ thuật trong lập trình được sử dụng để kiểm soát tần xuất các hành động được thực thi, đặc biết là sự kiện nhập liệu từ người dùng
+ -->
