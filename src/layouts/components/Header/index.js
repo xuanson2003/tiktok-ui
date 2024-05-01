@@ -9,7 +9,7 @@ import Button from '~/components/Button';
 import Image from '~/components/Image';
 import styles from './Header.module.scss';
 import Menu from '~/components/Popper/Menu';
-import Search from '~/components/Layout/Search';
+import Search from '~/layouts/Search';
 import {
     CoinIcon,
     KeyBoardIcon,
@@ -24,7 +24,7 @@ import {
     UserIcon,
 } from '~/components/Icons';
 import images from '~/assets/images';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -199,7 +199,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo')}>
+                <Link to={config.routes.home} className={cx('logo')}>
                     <img alt="File:TikTok logo.svg" src={images.LogoDark} className={cx('logoImage')} />
                 </Link>
 
