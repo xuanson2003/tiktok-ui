@@ -17,7 +17,7 @@
     background-color: var(--white);
     border: 1px solid transparent;
     color: var(--text-color);
-    font-family: 'IBM Plex Sans', TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-family: var(--font-family);
     text-align: left;
 
     &.disabled {

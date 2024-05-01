@@ -25,6 +25,7 @@
         background-color: transparent;
         caret-color: var(--primary);
         color: var(--black);
+        font-family: var(--font-family);
     }
 
     input:hover ~ .searchBtn,

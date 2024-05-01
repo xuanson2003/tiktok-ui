@@ -5,4 +5,6 @@
     border-radius: 8px;
     padding-top: 8px;
     max-height: min(-156px + 100vh, 760px);
+    display: flex;
+    flex-direction: column;
 }
