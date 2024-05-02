@@ -7,9 +7,9 @@ import classNames from 'classnames/bind';
 import * as searchServices from '~/services/searchService';
 import { useDebounce } from '~/hooks';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '~/components/AccountItem';
 import styles from './Search.module.scss';
 import { SearchIcon } from '~/components/Icons';
+import SearchResult from '../SearchResult';
 
 const cx = classNames.bind(styles);
 
@@ -19,24 +19,24 @@ function Search() {
     const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const debounced = useDebounce(searchValue, 500);
+    const debouncedValue = useDebounce(searchValue, 500);
 
     const inputRef = useRef();
 
     useEffect(() => {
-        if (!debounced.trim()) {
+        if (!debouncedValue.trim()) {
             setSearchResult([]);
             return;
         }
 
         const fetchApi = async () => {
             setLoading(true);
-            const result = await searchServices.search(debounced);
+            const result = await searchServices.search(debouncedValue);
             setSearchResult(result);
             setLoading(false);
         };
         fetchApi();
-    }, [debounced]);
+    }, [debouncedValue]);
 
     const handleClear = () => {
         setSearchValue('');
@@ -62,9 +62,7 @@ function Search() {
                     <div className={cx('searchResult')} tabIndex="-1" {...attrs}>
                         <PopperWrapper>
                             <h3 className={cx('searchTitle')}>Accounts</h3>
-                            {searchResult.map((result) => (
-                                <AccountItem key={result.id} data={result} />
-                            ))}
+                            {<SearchResult searchResult={searchResult} />}
                         </PopperWrapper>
                     </div>
                 )}

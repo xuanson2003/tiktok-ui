@@ -25,13 +25,16 @@
         opacity: 0.6;
     }
 }
-.title {
-    flex: 1;
+
+.leftIcon {
+    margin-right: 8px;
 }
 
-.icon + .title,
-.title + .icon {
+.rightIcon {
     margin-left: 8px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .icon {
