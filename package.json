@@ -23,6 +23,7 @@
   "devDependencies": {
     "babel-plugin-module-resolver": "^5.0.2",
     "customize-cra": "^1.0.0",
+    "prop-types": "^15.8.1",
     "react-app-rewired": "^2.2.1"
   },
   "scripts": {
