@@ -1,0 +1,81 @@
+.wrapper {
+    padding: 16px 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 8px;
+        right: 8px;
+        height: 1px;
+        background-color: rgba(22, 24, 35, 0.12);
+        transform: scaleY(0.5);
+    }
+}
+
+.label {
+    padding: 0 8px;
+    margin-bottom: 8px;
+    color: #161823bf;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+}
+
+.accountItem {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.itemInfo {
+    flex: 1;
+    margin-left: 12px;
+    height: 32px;
+}
+.nickname {
+    color: rgb(22, 24, 35);
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 21px;
+    margin-top: -2px;
+    max-width: 145px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.check {
+    margin-left: 4px;
+    font-size: 1.4rem;
+    color: #20d5ec;
+}
+.name {
+    color: rgba(22, 24, 35, 0.75);
+    font-family: TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 15px;
+    max-width: 145px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.moreBtn {
+    display: inline-block;
+    color: rgb(254, 44, 85);
+    font-weight: 600;
+    font-size: 1.4rem;
+    list-style: 1.8rem;
+    margin-top: 8px;
+    padding: 0 8px;
+    cursor: pointer;
+}
