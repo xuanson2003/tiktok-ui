@@ -9,7 +9,7 @@ import Button from '~/components/Button';
 import Image from '~/components/Image';
 import styles from './Header.module.scss';
 import Menu from '~/components/Popper/Menu';
-import Search from '~/layouts/Search';
+import Search from '~/layouts/components/Search';
 import {
     CoinIcon,
     KeyBoardIcon,
